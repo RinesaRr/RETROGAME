@@ -1,0 +1,596 @@
+body{
+    width:100%;
+    height: 100%;
+    background-color: #292929;
+    margin:5px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #F5225C;
+}
+
+
+/* COLOR */
+
+.purple{
+    color: #D917FA;
+}
+.pink{
+    color:#F5225C;
+}
+.blue{
+    color:#16F5B2;
+}
+.borderBlue{
+    border-radius: 35px;
+    border:1px solid #16F5B2 ;
+    padding: 20px;
+}
+.borderPink{
+    border-radius: 35px;
+    border:1px solid #F5225C ;
+    padding: 20px;
+}
+.borderPruple{
+    border-radius: 35px;
+    border:1px solid #D917FA ;
+    padding: 20px;
+}
+
+/* END COLOR */
+
+
+/* header */
+header{
+    width:auto;
+    display: flex;
+    flex-wrap: nowrap;   
+}
+
+.logo{
+    width:80px ;
+    border-radius: 50%;
+    background-image: href();
+}
+
+/* NAV */
+
+nav{
+    width:90%;
+}
+.nav-list{
+    width:100%;
+    min-height: 45px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.nav-item{
+    list-style: none;
+    display: flex;
+    flex-wrap: nowrap;
+    margin-right: 2rem;
+    text-transform: uppercase;
+    font-weight: 600px;
+}
+
+.nav-item a{
+    color: #F5225C;
+    letter-spacing: 1.2px;
+    cursor:pointer;
+    text-decoration: none;
+    font-weight: bold;
+}
+.nav-item4{
+    width: max-content;
+    list-style: none;
+    display: flex;
+    flex-wrap: nowrap;
+    margin-right: 2rem;
+}
+
+.nav-item4 a{
+    color: #F5225C;
+    letter-spacing: 1.2px;
+    cursor:pointer;
+    text-decoration: none;
+    font-weight: bold;
+    width: max-content;
+}
+
+nav > ol > li {
+    background-color: white;
+    position: relative;
+    height: 100%;
+    flex: 1;
+  }
+
+
+nav > ol > li > a {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+
+
+.nav-item4 > a:after{
+    content: '❯';
+    font-size: 15px;
+    margin-left: 7px;
+    display: inline-block;
+}
+.sous-nav {
+    width: 100%;
+    text-align: left;
+    background-color: #292929;
+    border-radius: 2px;
+    overflow: hidden;
+    max-height: 0;
+}
+.sous-nav > li > a {
+    height: 50px;
+    padding-left: 20px;
+    width: 100%;
+    align-items: center;
+    display: flex;
+}
+.sous-menu {
+    margin-top: var(--hauteur-menu);
+    width: 100%;
+    text-align: left;
+    background-color: white;
+    border-radius: 2px;
+    overflow: hidden;
+    max-height: 0;
+}
+  
+.sous-menu > li > a {
+    height: 50px;
+    padding-left: 20px;
+    width: 100%;
+    align-items: center;
+    display: flex;
+}
+
+nav > ul > li:active > a{
+    color: #16F5B2;
+}
+
+.sous-menu > li:hover {
+    background-color: rgba(33, 105, 236, 0.3);
+}
+  
+.sous-menu > li:hover > a {
+    color: white;
+}
+
+@keyframes rotationFleche {
+    0% {
+      transform: rotate(0deg);
+    }
+    100%{
+      transform: rotate(90deg);
+    }
+}
+.menu-deroulant:hover > a:after{
+    animation: rotationFleche 0.2s linear forwards;
+}
+@keyframes apparitionSousMenu {
+    0% {
+      box-shadow: 0px 3px 3px 1px rgba(0,0,0,0);
+      border-top: 3px solid #2169EC;
+    }
+    30% {
+      box-shadow: 0px 3px 3px 1px rgba(0,0,0,0.3);
+    }
+    100% {
+      max-height: 50em;
+      border-top: 3px solid #2169EC;
+      box-shadow: 0px 3px 3px 1px rgba(0,0,0,0.3);
+    }
+}
+.menu-deroulant:hover > .sous-menu {
+    animation: apparitionSousMenu 1s forwards;
+}
+
+/* END NAV */
+
+
+/* Contenu */
+.intro{
+    width:100%;
+    display: flex;
+    text-align: center;
+}
+
+.intro_div{
+    width: 50%;
+    height:350px;
+    text-align: center;
+}
+
+.intro_img{
+    width:fit-content;
+}
+
+.logo2{
+    width:50%;
+    height: 350px;
+    margin-right:auto;
+    margin-left: auto;
+    position: absolute;
+}
+
+.link{
+    width:50%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-wrap:  nowrap;
+    text-align: center;
+    border-color: #16F5B2;
+}
+
+.link img{
+    width:50px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.nav2{
+    width:100%;
+    margin-right:auto;
+    margin-left: auto;
+    text-align: center;
+}
+.nav2 a{
+    display: flex;
+    flex-direction: column;
+    letter-spacing: 1.2px;
+    cursor:pointer;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+/* Produit en vente */
+
+.product{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-wrap: nowrap;
+}
+.product > div{
+    width:fit-content;
+    margin-right:auto;
+    margin-left: auto;
+    padding-bottom: 15px;
+}
+
+.product img{
+    width:250px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 26px;
+}
+
+.product1{
+    width: fit-content;
+    margin-left:auto;
+    margin-right: auto;
+    border-radius: 30px;
+    border-color: #16F5B2;
+    border-style: solid;
+    background-color: #D917FA;
+    color:#16F5B2;
+}
+
+.product1 h3{
+    text-align: start;
+    padding-left: 30px;
+}
+
+button{
+    text-align: left;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bolder;
+    color: #16F5B2;
+    padding: 10px 50px 10px 50px;
+    border: 3px solid #16F5B2;
+    border-radius: 30px;
+    position: relative;
+    background-color: #292929;
+    float: right;
+}
+button::after{
+    width: 0;
+}
+
+
+/* Game Page */
+.search{
+    width: 90%;
+    display: flex;
+    flex-wrap: nowrap;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+input{
+    width: 250px;
+    min-height: 40px;
+    background-color: #F5225C;
+    border: solid #F5225C;
+    border-radius: 40px;
+    color: #16F5B2;
+    font-weight: bolder;
+    margin-top: 10px;
+}
+::-webkit-input-placeholder{
+    color: #16F5B2;
+}
+.right{
+    justify-content: right;
+}
+
+/* List of Games */
+.row{
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    color: #D917FA;
+}
+.row > div{
+    margin-right:auto;
+    margin-left: auto;
+    padding: 15px;
+}
+.row img{
+    width:  320px;
+    border-radius: 35px;
+
+}
+
+.row2{
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+}
+.row2 > div{
+    margin-right:auto;
+    margin-left: auto;
+    padding: 15px;
+}
+.row2 img{
+    width:  320px;
+    border-radius: 35px;
+
+}
+
+.row3{
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    color: #16F5B2;
+}
+.row3 > div{
+    margin-right:auto;
+    margin-left: auto;
+    padding: 15px;
+}
+.row3 img{
+    width:  320px;
+    height: 320px;
+    border-radius: 35px;
+
+}
+/* End List of Games */
+
+/* End Game Page */
+
+/* Destiny 2 Page */
+
+h2{
+    text-align: center;
+}
+
+.GameInfo{
+    width: 91%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin-right: auto;
+    margin-left:auto ;
+}
+
+.GameInfo img{
+    width: 510px;
+    border: 1px solid #16F5B2;
+    border-radius: 35px;
+}
+
+.DestinyInfo{
+    margin-right: auto;
+    margin-left: auto;
+    margin-left:70px;
+    border: 1px solid #16F5B2;
+    border-radius: 35px;
+}
+.DestinyInfo h1{
+    font-weight: bolder;
+    margin-left: 20px;
+}
+.DestinyInfo p{
+    width: auto;
+    font-size: 20px;
+    font-weight: bolder;
+    padding: 0px 35px 0px 35px ;
+}
+
+
+.moreInfo{
+    width:50%;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 10px;
+}
+.moreInfo img{
+    width: 35px;
+    font-style: none;
+    border: 0px solid #16F5B2;
+    border-radius: 0px;
+}
+.moreInfo h5{
+    display: inline-block;
+}
+
+/* End of Destiny 2 */
+
+/* Page LOGIN */
+
+
+.LogInFlex{
+    width: 90%;
+    display: flex;
+    flex-wrap: nowrap;
+    margin-right: auto;
+    margin-left:auto;
+}
+
+
+main{
+    width: 50%;
+}
+
+section{
+    width: 100%;
+    display: flex;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+
+section img{
+    width:250px;
+    border-radius:50%;
+}
+section h1{
+    padding: 20px;
+    align-self: center;
+    text-align: center;
+}
+
+
+
+.form{
+    display: flex;
+    flex-direction: column;
+    margin-right: auto;
+    margin-left: auto;
+}
+.form input{
+    width: 100%;
+    min-height: 60px;
+    background-color: #D9D9D9;
+    border: solid #D9D9D9;
+    border-radius: 40px;
+    color: #292929;
+    font-weight: bolder;
+    margin-top: 10px;
+}
+::-webkit-input-placeholder{
+    color: #292929;
+}
+form input .bouton{
+    width:390px;
+    border: solid #F5225C;
+    background-color: #292929;
+}
+
+
+
+.CreateAcc{
+    width: 50%;
+    margin-left: 50px;
+    border: 1px solid #16F5B2;
+    border-radius: 35px;
+    color: #16F5B2;
+    padding: 20px;
+}
+.CreateAcc input{
+    width:100%;
+    min-height: 60px;
+    background-color: #D9D9D9;
+    border-radius:40px;
+    border: solid #D9D9D9;
+    border-radius: 40px;
+    color: #292929;
+    font-weight: bolder;
+}
+
+.inpt{
+    display: flex;
+    flex-direction: column;
+}
+
+button{
+    width:150px;
+    background-color: #292929;
+    border-color:#F5225C;
+    color:#F5225C;
+    text-align: center;
+    align-self: flex-end;
+    padding:15px;
+}
+.button2{
+    width:150px;
+    background-color: #292929;
+    border-color:#16F5B2;
+    color:#16F5B2;
+    text-align: center;
+    align-self: flex-end;
+    padding:15px;
+}
+
+/* FIN Page LOGIN */
+
+/* Account Page */
+
+#Order{
+    width: 50%;
+    margin-left: 50px;
+    border: 1px solid #D917FA;
+    border-radius: 35px;
+    color: #D917FA;
+    padding: 20px;
+}
+
+
+
+/* Fin Account Page */
+
+
+
+/* RESPONSIVE */
+
+@media screen and(min-width: 800px){
+    
+}
